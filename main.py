@@ -16,7 +16,7 @@ def compute_r2d2_population(steps: int) -> tuple[int,int,int]:
 
 
 #---------------------Aufgabe 3 Heron ------------------------------------
-def heron_verfahren(area : float, threshold:float) -> float:
+def heron_verfahren(area: float, threshold: float) -> float:
     """
         computes the square root using the heron method
     :param area: size of the area e.g.25
@@ -24,7 +24,13 @@ def heron_verfahren(area : float, threshold:float) -> float:
     :return:the square root of the given area according to the heron method
     """
 
-    return 0
+    x = area;
+
+    while True:
+        nextX = 0.5 * (x + area / x);
+        if abs(nextX - x) < threshold:
+            return nextX;
+        x = nextX;
 
 
 #---------------------Aufgabe 4 Quersumme------------------------------
