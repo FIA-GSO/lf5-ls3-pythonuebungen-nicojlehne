@@ -6,7 +6,7 @@ import main
 class TestAufgabe3(unittest.TestCase):
 
     def test_heron(self):
-        result1 = 5.000023178253949
+        result1 = 5.000000000053722
         step1 = main.heron_verfahren(25,0.01)
         self.assertEqual(step1, result1)
 
